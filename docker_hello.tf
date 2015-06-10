@@ -6,6 +6,7 @@ provider "docker" {
 
 # Create a container
 resource "docker_container" "foo" {
+    provider = "docker.praqma"
     image = "${docker_image.jenkins.latest}"
     name = "foo"
     ports {
